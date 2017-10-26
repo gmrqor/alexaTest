@@ -1,0 +1,356 @@
+{
+  "intents": [
+    {
+      "name": "AccountList",
+      "samples": [
+        "what is my account balance",
+        "what is my {ACCOUNT_TYPE} balance",
+        "what is my {LAST_FOUR_DIST} account balance",
+        "what is my {ACCOUNT_TYPE} and {LAST_FOUR_DIST} account balance"
+      ],
+      "slots": [
+        {
+          "name": "ACCOUNT_TYPE",
+          "type": "LIST_OF_ACCTYPE",
+          "samples": []
+        },
+        {
+          "name": "LAST_FOUR_DIST",
+          "type": "AMAZON.FOUR_DIGIT_NUMBER",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "AccountTrx",
+      "samples": [
+        "What is my checking account transaction",
+        "I want to know my checking account transaction history",
+        "Tell me my account transaction",
+        "I want to know {TRX_TYPE} transaction history for my checking account",
+        "What is {TRX_TYPE} transaction history from my checking account",
+        "Tell me {TRX_TYPE} transaction history from my checking account",
+        "I want to know my transaction history on {DATE}",
+        "Tell me transaction history form my checking account on {DATE}",
+        "Tell me {PERIOD} transaction",
+        "What is transaction history for {PERIOD} ",
+        "Tell me transaction history from {START_DATE}",
+        "Tell me transaction history from {START_DATE} to {END_DATE}"
+      ],
+      "slots": [
+        {
+          "name": "TRX_TYPE",
+          "type": "LIST_OF_TRXTYPE",
+          "samples": []
+        },
+        {
+          "name": "DATE",
+          "type": "AMAZON.DATE",
+          "samples": []
+        },
+        {
+          "name": "PERIOD",
+          "type": "AMAZON.DURATION",
+          "samples": []
+        },
+        {
+          "name": "START_DATE",
+          "type": "AMAZON.DATE",
+          "samples": []
+        },
+        {
+          "name": "END_DATE",
+          "type": "AMAZON.DATE",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "AMAZON.CancelIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.HelpIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.StopIntent",
+      "samples": []
+    },
+    {
+      "name": "BranchDetail",
+      "samples": [
+        "I want to know more about {BRANCH_NAME}",
+        "{BRANCH_NAME}"
+      ],
+      "slots": [
+        {
+          "name": "BRANCH_NAME",
+          "type": "LIST_OF_BRANCH",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "BranchInfo",
+      "samples": [
+        "Tell me about branch"
+      ],
+      "slots": []
+    },
+    {
+      "name": "ExchangeRate",
+      "samples": [
+        "How much is {AMOUNT} {CURRENCY} {DATE}",
+        "How much is {AMOUNT} {CURRENCY} on {DATE}",
+        "I want to know {CURRENCY} rate",
+        "give me currency rate on {DATE}",
+        "What is {CURRENCY} rate on {DATE}",
+        "what is {AMOUNT} US dollar to Korea won",
+        "what is {AMOUNT} US dollar to {CURRENCY}",
+        "what is {AMOUNT} US dollar to {CURRENCY} on {DATE}",
+        "what is exchange rate",
+        "what is exchange rate on {DATE}"
+      ],
+      "slots": [
+        {
+          "name": "CURRENCY",
+          "type": "LIST_OF_CURRENCY",
+          "samples": []
+        },
+        {
+          "name": "DATE",
+          "type": "AMAZON.DATE",
+          "samples": []
+        },
+        {
+          "name": "AMOUNT",
+          "type": "AMAZON.NUMBER",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "LoanList",
+      "samples": [
+        "tell me my loan information",
+        "tell me information of loan with principal amount around {LOAN_EXE_AMT}",
+        "tell me information of loan to terminate on around {LOAN_DUE_DATE}",
+        "tell me information of loan contracted around {LOAN_EXE_DT}"
+      ],
+      "slots": [
+        {
+          "name": "LOAN_EXE_AMT",
+          "type": "AMAZON.NUMBER",
+          "samples": []
+        },
+        {
+          "name": "LOAN_DUE_DATE",
+          "type": "AMAZON.DATE",
+          "samples": []
+        },
+        {
+          "name": "LOAN_EXE_DT",
+          "type": "AMAZON.DATE",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "LoanTrx",
+      "samples": [
+        "What is my loan transaction",
+        "I want to know my loan transaction history",
+        "Tell me my loan transaction",
+        "I want to know {LAST_FOUR_DIST} account transaction history for my loan",
+        "What is {LAST_FOUR_DIST} account transaction history from my loan",
+        "Tell me {LAST_FOUR_DIST} account transaction history from my loan",
+        "I want to know my loan transaction history on {DATE}",
+        "Tell me transaction history form my loan on {DATE}",
+        "Tell me {PERIOD} loan transaction",
+        "What is loan transaction history for {PERIOD} ",
+        "Tell me loan transaction history from {START_DATE}",
+        "Tell me loan transaction history from {START_DATE} to {END_DATE}"
+      ],
+      "slots": [
+        {
+          "name": "LAST_FOUR_DIST",
+          "type": "AMAZON.FOUR_DIGIT_NUMBER",
+          "samples": []
+        },
+        {
+          "name": "DATE",
+          "type": "AMAZON.DATE",
+          "samples": []
+        },
+        {
+          "name": "PERIOD",
+          "type": "AMAZON.DURATION",
+          "samples": []
+        },
+        {
+          "name": "START_DATE",
+          "type": "AMAZON.DATE",
+          "samples": []
+        },
+        {
+          "name": "END_DATE",
+          "type": "AMAZON.DATE",
+          "samples": []
+        }
+      ]
+    },    
+    {
+      "name": "SetNo",
+      "samples": [
+        "no",
+        "negative"
+      ],
+      "slots": []
+    },
+    {
+      "name": "SetPersonalKey",
+      "samples": [
+        "{PERSONAL_KEY}"
+      ],
+      "slots": [
+        {
+          "name": "PERSONAL_KEY",
+          "type": "AMAZON.FOUR_DIGIT_NUMBER",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "SetYes",
+      "samples": [
+        "yes",
+        "next",
+        "positive"
+      ],
+      "slots": []
+    },
+    {
+      "name": "ShinhanInfo",
+      "samples": [
+        "Tell me about shinhan bank ",
+        "What is shinhan bank ",
+        "Tell me more about shinhan bank"
+      ],
+      "slots": []
+    }
+  ],
+  "types": [
+    {
+      "name": "LIST_OF_ACCTYPE",
+      "values": [
+        {
+          "id": null,
+          "name": {
+            "value": "checking account",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "saving account",
+            "synonyms": []
+          }
+        }
+      ]
+    },
+    {
+      "name": "LIST_OF_BRANCH",
+      "values": [
+        {
+          "id": null,
+          "name": {
+            "value": "new york",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "manhattan",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "flushing",
+            "synonyms": []
+          }
+        }
+      ]
+    },
+    {
+      "name": "LIST_OF_CURRENCY",
+      "values": [
+        {
+          "id": null,
+          "name": {
+            "value": "AUD",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "CAD",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "KRW",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "JPY",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "SGD",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "USD",
+            "synonyms": []
+          }
+        }
+      ]
+    },
+    {
+      "name": "LIST_OF_TRXTYPE",
+      "values": [
+        {
+          "id": null,
+          "name": {
+            "value": "credit",
+            "synonyms": []
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "debit",
+            "synonyms": []
+          }
+        }
+      ]
+    }
+  ]
+}
