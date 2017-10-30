@@ -29,6 +29,7 @@ const handlers = {
             options.data.date = dateSlot.value.replace(/[^0-9]/g, '');
         }
 
+        GibUtil.clearSessionAttributes(this);
         GibUtil.request(options);
     }
 };
@@ -66,7 +67,7 @@ const callback = function(options, result) {
         }
     }
 
-	handler.emit(':tellWithCard', speechOutput, Config.card_title, speechOutput);
+    handler.emit(':tellWithCard', speechOutput, Config.card_title, speechOutput);
 
     console.info('Ending ExchangeRate');
 };
